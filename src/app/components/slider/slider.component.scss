@@ -1,0 +1,48 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
+  color: #999;
+  position: relative;
+
+  .slide {
+    position: relative;
+    display: flex;
+    height: 35rem;
+
+    .slide-bg {
+      position: relative;
+      display: flex;
+      flex: 1 1 auto;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: "";
+
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 30%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .slide-bg-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .slide-pane {
+      position: absolute;
+      top: 200px;
+      left: 200px;
+    }
+  }
+}
